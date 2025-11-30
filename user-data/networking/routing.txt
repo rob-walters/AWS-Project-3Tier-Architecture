@@ -1,0 +1,11 @@
+Public Route Table
+------------------
+0.0.0.0/0 → Internet Gateway
+Associated with:
+- public-a
+- public-b
+
+Private Route Table
+-------------------
+Local routing only
+No Internet Gateway or NAT Gateway
