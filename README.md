@@ -113,10 +113,13 @@ EOF
 
 cd /var/www/html
 nohup python3 -m http.server 80 &
+###
+
+---
 
 User → ALB → EC2 (Python app) → (optional) RDS
 
-Private subnet
+### Private subnet
 No public IP
 Only reachable through the ALB
 
