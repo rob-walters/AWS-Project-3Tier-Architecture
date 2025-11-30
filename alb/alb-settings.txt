@@ -1,0 +1,13 @@
+Name: project3-alb
+Scheme: internet-facing
+Listeners:
+- HTTP 80 → project3-tg
+
+Subnets:
+- public-a
+- public-b
+
+Security Group: web-sg
+Target Group: project3-tg
+Targets:
+- project3-app-1
