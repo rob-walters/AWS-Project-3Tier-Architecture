@@ -1,0 +1,6 @@
+Engine: MySQL
+Instance class: db.t3.micro (free tier)
+Public access: No
+Storage: 20GB gp2
+Security group: db-sg
+VPC: project3-vpc
