@@ -1,1 +1,7 @@
-
+Name: project3-app-1
+Instance type: t2.micro
+AMI: Amazon Linux 2023
+Subnet: private-app-a
+Security Group: app-sg
+Public IP: disabled
+User data: app-tier-user-data.sh
