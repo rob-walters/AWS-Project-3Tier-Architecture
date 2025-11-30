@@ -117,14 +117,13 @@ nohup python3 -m http.server 80 &
 ```  
 User → ALB → EC2 (Python app) → (optional) RDS
 
-Private subnet
-No public IP
-Only reachable through the ALB
+- Private subnet
+- No public IP
+- Only reachable through the ALB
 
 ### 🛢 Database Tier (RDS)
 MySQL engine
-Free-tier instance class
-20GB storage
+
 Public access disabled
 Private DB subnets
 Only accessible from app-sg
@@ -141,33 +140,29 @@ User → ALB → EC2 (Python app) → (optional) RDS
 
 ###  🧪 Testing the Architecture
 When visiting the ALB DNS URL, the following page loads:
+
 Project 3 – App Tier
+
 This page is served from an EC2 instance in a private subnet.
 Status: Running
+
 This confirms:
-ALB is working
-EC2 web server is running
-Private subnets configured correctly
-Security groups correctly applied
+- ALB is working
+- EC2 web server is running
+- Private subnets configured correctly
+- Security groups correctly applied
 
 ###  🧱 Why This Architecture Matters
 Security
-Private EC2
-Private RDS
-Only ALB exposed publicly
-Layer-by-layer security
+- Private EC2
+- Private RDS
+- Only ALB exposed publicly
+- Layer-by-layer security
 Scalability
-ALB supports Auto Scaling
-Easy to add more app servers
-Cost-Efficient
-All free-tier services
-No NAT Gateway
-Python server requires no internet access
-Industry Standard
-This layout matches real production architectures.
+- ALB supports Auto Scaling
+- Easy to add more app servers
 
 ###  📈 Future Improvements
-
 Add HTTPS with ACM
 Add NAT gateway for SSM & updates
 Add Auto Scaling Groups
@@ -176,8 +171,8 @@ Add IaC (Terraform/CloudFormation)
 Add CI/CD Pipeline
 
 ###  🤝 Summary
-
 This project demonstrates AWS 3-tier architecture using:
+
 VPC
 Public & private subnets
 Security groups
@@ -186,6 +181,3 @@ Private EC2
 Private RDS
 
 All resources are secured, working, and within the AWS free tier.
-
-
-
