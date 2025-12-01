@@ -1,5 +1,5 @@
-# AWS - 3 Tier-Architecture Secure 3-Tier Web Application Architecture (ALB, EC2, RDS, VPC)
-# 📘 Project 3 – AWS 3-Tier Web Application (Free-Tier Architecture)
+# AWS - 3 Tier-Architecture (ALB, EC2, RDS, VPC)
+# 📘 AWS 3-Tier Web Application (Free-Tier Architecture)
 
 ## 📌 Overview
 This project builds a secure and cost-efficient 3-tier web application on AWS.  
@@ -137,38 +137,6 @@ Target group: project3-tg
 Target: EC2 app instance
 Request Flow:
 User → ALB → EC2 (Python app) → (optional) RDS
-
-###  🧪 Testing the Architecture
-When visiting the ALB DNS URL, the following page loads:
-
-Project 3 – App Tier
-
-This page is served from an EC2 instance in a private subnet.
-Status: Running
-
-This confirms:
-- ALB is working
-- EC2 web server is running
-- Private subnets configured correctly
-- Security groups correctly applied
-
-###  🧱 Why This Architecture Matters
-Security
-- Private EC2
-- Private RDS
-- Only ALB exposed publicly
-- Layer-by-layer security
-Scalability
-- ALB supports Auto Scaling
-- Easy to add more app servers
-
-###  📈 Future Improvements
-Add HTTPS with ACM
-Add NAT gateway for SSM & updates
-Add Auto Scaling Groups
-Add CloudWatch alarms
-Add IaC (Terraform/CloudFormation)
-Add CI/CD Pipeline
 
 ###  🤝 Summary
 This project demonstrates AWS 3-tier architecture using:
